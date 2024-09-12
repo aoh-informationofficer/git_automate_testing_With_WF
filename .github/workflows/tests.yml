@@ -10,18 +10,18 @@ jobs:
   tests:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: "Starting to run test"
-      run: echo "Starting test..."
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: "Setup Node.js v16.18"
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16.18
-    - name: "npm clean install"
-      run: npm ci
-    - name: "tests begin"
-      run: npm test
-    - name: "Process Ended"
-      run: echo "Ending test..."
+    steps:
+      - name: "Starting to run test"
+        run: echo "Starting test..."
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: "Setup Node.js v16.18"
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.18
+      - name: "npm clean install"
+        run: npm ci
+      - name: "tests begin"
+        run: npm test
+      - name: "Process Ended"
+        run: echo "Ending test..."
