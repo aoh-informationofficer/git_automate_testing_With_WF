@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-    - name: Starting to run test...
-      run: echo "Starting to run test..."
+    - name: Starting to run test
+      run: echo "Starting test..."
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup Node.js v18.x
