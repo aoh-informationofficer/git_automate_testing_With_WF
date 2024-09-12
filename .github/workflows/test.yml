@@ -2,9 +2,9 @@ name: Unit workflow
 
 on:
   push:
-    branch: "main"
+    branches: "main"
   pull_request:
-    branch: "main"
+    branches: "main"
 
 jobs:
   tests:
@@ -15,9 +15,10 @@ steps:
     run: echo "Starting to run test..."
   - name: Checkout
     uses: actions/checkout@v2
-  - name: Install Node.js v18.x
+  - name: Setup Node.js v18.x
+    uses: actions/setup-node@v2
     with:
-      node-version: 18.x
+      node-version: 16.18
   - name: npm clean install
     run: npm ci
   - name: tests
