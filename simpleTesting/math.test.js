@@ -15,7 +15,7 @@ describe("Math functions", () => {
   });
 
   test("divides two numbers", () => {
-    expect(divide(6, 3)).toBe(2);
+    expect(divide(4, 3)).toBe(2);
   });
 
   test("throws error when dividing by zero", () => {
