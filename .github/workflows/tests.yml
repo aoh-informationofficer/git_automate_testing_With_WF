@@ -7,8 +7,14 @@ on:
     branches: "main"
 
 jobs:
-  tests:
+  tests: # The jobs name needs to be in the branch rules
     runs-on: ubuntu-latest
+
+    # we can use straegy and matrix to determine weather which version we want to use for our npm items.
+    # example: node version, or python or npm version so on
+    # matrix means we will want to run all our script with the same versions of install that we are using
+
+    # env are environment variable. (we can use something called github secret if we need to instead as well)
 
     steps:
       - name: "Starting to run test"
@@ -23,8 +29,5 @@ jobs:
         run: npm ci
       - name: "tests begin"
         run: npm test
-      - name: Report success or failure
-        if: ${{ always() }}
-        run: echo "Tests completed"
       - name: "Process Ended"
         run: echo "Ending test..."
