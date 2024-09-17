@@ -18,4 +18,11 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, subtract, multiply, divide };
+function power(a,b) {
+  if (b == 0) {
+    return 1;
+  }
+  return Math.pow(a,b);
+}
+
+module.exports = { add, subtract, multiply, divide, power };

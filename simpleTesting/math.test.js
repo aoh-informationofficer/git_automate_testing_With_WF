@@ -1,5 +1,5 @@
 // math.test.js
-const { add, subtract, multiply, divide } = require("./math");
+const { add, subtract, multiply, divide, power } = require("./math");
 
 describe("Math functions", () => {
   test("adds two numbers", () => {
@@ -20,5 +20,13 @@ describe("Math functions", () => {
 
   test("throws error when dividing by zero", () => {
     expect(() => divide(6, 0)).toThrow("Cannot divide by zero");
+  });
+
+  test("return 1 if to the power is equal to 0", () => {
+    expect(power(3,0)).toBe(1);
+  });
+
+  test("power two numbers", () => {
+    expect(power(2,6)).toBe(64);
   });
 });
